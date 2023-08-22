@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_07_PreguntadORT\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\TP_07_PreguntadORT.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TP_07_PreguntadORT.bundle.scp.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_07_PreguntadORT\\wwwroot\\BD_PreguntadORT.sql",
+      "PackagePath": "staticwebassets\\BD_PreguntadORT.sql"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_07_PreguntadORT\\wwwroot\\css\\configurarJuegoStyle.css",
+      "PackagePath": "staticwebassets\\css\\configurarJuegoStyle.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_07_PreguntadORT\\wwwroot\\css\\font\\HomepageBaukasten-Book.otf",
+      "PackagePath": "staticwebassets\\css\\font\\HomepageBaukasten-Book.otf"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_07_PreguntadORT\\wwwroot\\css\\indexStyle.css",
+      "PackagePath": "staticwebassets\\css\\indexStyle.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_07_PreguntadORT\\wwwroot\\css\\jugarStyle.css",
+      "PackagePath": "staticwebassets\\css\\jugarStyle.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_07_PreguntadORT\\wwwroot\\css\\respuesta.css",
+      "PackagePath": "staticwebassets\\css\\respuesta.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_07_PreguntadORT\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_07_PreguntadORT\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_07_PreguntadORT\\wwwroot\\img\\fondo.jpg",
+      "PackagePath": "staticwebassets\\img\\fondo.jpg"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_07_PreguntadORT\\wwwroot\\img\\logo.jpg",
+      "PackagePath": "staticwebassets\\img\\logo.jpg"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_07_PreguntadORT\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.TP_07_PreguntadORT.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.TP_07_PreguntadORT.props",
+      "PackagePath": "build\\TP_07_PreguntadORT.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.TP_07_PreguntadORT.props",
+      "PackagePath": "buildMultiTargeting\\TP_07_PreguntadORT.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.TP_07_PreguntadORT.props",
+      "PackagePath": "buildTransitive\\TP_07_PreguntadORT.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
