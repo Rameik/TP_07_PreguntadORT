@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Configurar juego";
+}
+
+<link rel="stylesheet" href="~/css/configurarJuegoStyle.css">
+
+<h1>Configurar Juego</h1>
+
+<form action='@Url.Action("Comenzar")' method="get">
+    <div class="cartas">
+        <div class="carta">
+            <p>Seleccione la dificultad del juego:</p>
+
+            <div class="radio-input">
+                @foreach(var item in ViewBag.Dificultades){
+                    <label>
+                        <input value="@item.IdDificultad" name="dificultad" type="radio" checked="">
+                        <span>@item.Nombre</span>
+                    </label>
+                }
+                <label>
+                    <input value="-1" name="dificultad" type="radio">
+                    <span>Todas</span>
+                </label>
+
+                <span class="selection"></span>
+            </div>
+        </div>
+
+        <div class="carta">
+            <p>Seleccione la categoria del juego:</p>
+            <select name="categoria">
+                @foreach(var item in ViewBag.Categorias){
+                    <option value="@item.IdCategoria">@item.Nombre</option>
+                }
+                <option value= "-1">Todas</option>
+            </select>
+        </div>
+
+        <div class="carta">
+            <p style="margin-bottom:0px">Ingrese su nombre de usuario:</p>
+            <div class="inputGroup">
+                <input type="text" required="" autocomplete="off" name="username">
+                <label for="usuario">Usuario</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-boton">
+        <input class="btn-material" type="submit" value="Jugar">
+    </div>
+</form>
+

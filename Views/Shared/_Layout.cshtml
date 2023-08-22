@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - PreguntadORT </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="icon" href="~/img/logo.jpg">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo"><a href='@Url.Action("Index")'><img src="~/img/logo.jpg" alt=""><h1>PreguntadORT</h1></a></div>
+                <ul>
+                    <li><a href='@Url.Action("ConfigurarJuego")'>Jugar</a></li>
+                    <li><a href='@Url.Action("Tutorial")'>Tutorial</a></li>
+                    <li><a href='@Url.Action("Creditos")'>Creditos</a></li>
+                    <li><a href='@Url.Action("Puntajes")'>Puntajes</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+
+            <div class="menu-desplegado">
+                <li><a href='@Url.Action("ConfigurarJuego")'>Jugar</a></li>
+                <li><a href='@Url.Action("Tutorial")'>Tutorial</a></li>
+                <li><a href='@Url.Action("Creditos")'>Creditos</a></li>
+                <li><a href='@Url.Action("Puntajes")'>Puntajes</a></li>
+            </div>
+        </header>
+        <div>
+            @RenderBody()
+        </div>
+
+        <footer>
+                &copy; @DateTime.Now.Year - Taller de Programación - TP_07_PreguntadORT
+        </footer>
+
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</html>

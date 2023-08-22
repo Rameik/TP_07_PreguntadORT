@@ -1,0 +1,164 @@
+@{
+    ViewData["Title"] = "Tutorial";
+}
+
+<style>
+    .card {
+        top: 50%;
+        left: 50%;
+        width: 320px;
+        height: 320px;
+        perspective: 500px;
+        margin: 2%;
+    }
+
+    h1{
+        margin-bottom: 0px;
+    }
+
+    .content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        border-radius: 15px;
+    }
+
+    .card:hover .content {
+        transform: rotateY( 180deg ) ;
+        transition: transform 0.5s;
+    }
+
+    .front{
+        background-color: rgba(0, 0, 0, 0.25);
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .front h2{
+        color: #e9e0d2;
+        font-size: 2rem;
+        padding: 2%;
+    }
+
+    .front, .back{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        backface-visibility: hidden;
+    }
+
+    .back {
+        background-color: rgba(0, 0, 0, 0.5);
+        transform: rotateY( 180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .back p{
+        color: #e9e0d2;
+        font-size: 1rem;
+        padding: 2% 4%;
+    }
+
+    .contenedor{
+        margin: 0 5%;
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+</style>
+
+<h1>Tutorial</h1>
+
+<div class="contenedor">
+    <div class="card">
+        <div class="content">
+            <div class="front">
+                <h2 class="subtitulo">Paso 1: Selecciona la dificultad y la categoría</h2>
+            </div>
+            <div class="back">
+                <p>Al iniciar el juego, se te presentará un menú inicial. En este menú, tendrás la opción de seleccionar la dificultad del juego y la categoría de preguntas que deseas responder.</p>
+                <p>La dificultad puede variar entre fácil, intermedio y difícil, lo que determinará la complejidad de las preguntas.</p>
+                <p>La categoría podría incluir temas como ciencia, historia, deportes, entretenimiento, etc.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="front">
+                <h2 class="subtitulo">Paso 2: Ingresa un nombre de usuario</h2>
+            </div>
+            <div class="back">
+                <p>Después de elegir la dificultad y la categoría, se te pedirá que ingreses un nombre de usuario.</p>
+                <p>Escribe un nombre que te identifique en el juego. Este será mostrado junto a tu puntaje al final del juego.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="content">
+            <div class="front">
+                <h2 class="subtitulo">Paso 3: Comienza el juego</h2>
+            </div>
+            <div class="back">
+                <p>Una vez que hayas ingresado tu nombre de usuario, el juego comenzará.</p>
+                <p>Cada ronda del juego presentará una pregunta en la categoría que seleccionaste.</p>
+                <p>Lee cuidadosamente la pregunta y las opciones de respuesta proporcionadas.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contenedor">
+    <div class="card">
+        <div class="content">
+            <div class="front">
+                <h2 class="subtitulo">Paso 4: Adivina la respuesta</h2>
+            </div>
+            <div class="back">
+                <p>Selecciona la opción que creas que es la respuesta correcta a la pregunta.</p>
+                <p>Si adivinas correctamente, ganarás 5 puntos que se sumarán a tu puntaje total.</p>
+                <p>Si no adivinas correctamente, no se sumarán puntos, pero podrás pasar a la siguiente pregunta.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="content">
+            <div class="front">
+                <h2 class="subtitulo">Paso 5: Repite los pasos 3 y 4</h2>
+            </div>
+            <div class="back">
+                <p>El juego continuará presentándote preguntas una tras otra.</p>
+                <p>Continúa seleccionando respuestas y ganando puntos por respuestas correctas.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="front">
+                <h2 class="subtitulo">Paso 6: Finaliza el juego y muestra el puntaje</h2>
+            </div>
+            <div class="back">
+                <p>Una vez que hayas respondido todas las preguntas en la categoría seleccionada, el juego finalizará.</p>
+                <p>Se mostrará una pantalla que presenta tu nombre de usuario y tu puntaje total acumulado.</p>
+                <p>Felicidades, ¡has completado el juego! Puedes intentar nuevamente con diferentes dificultades o categorías para mejorar tu puntaje.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="display: flex; justify-content: center; margin-bottom: 20px;">
+    <a href='@Url.Action("Index")' class="btn">Volver al inicio</a>
+</div>

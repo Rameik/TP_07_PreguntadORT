@@ -1,0 +1,102 @@
+@{
+    ViewData["Title"] = "Jugar";
+}
+
+<link rel="stylesheet" href="~/css/jugarStyle.css">
+
+<div class="datos">
+    <p>Usuario: @ViewBag.Usuario</p>
+
+    <p>Puntaje actual: @ViewBag.Puntaje</p>
+</div>
+
+<h1 class="titulo">@ViewBag.Pregunta.Enunciado</h1>
+
+<div class="respuestas">
+ @foreach(var item in ViewBag.Respuestas){
+    <form action='@Url.Action("VerificarRespuesta")' method="post">
+        <input type="hidden" name="idPregunta" value="@item.IdPregunta">
+        <input type="hidden" name="idRespuesta" value="@item.IdRespuesta">
+        <input type="submit" class="respuesta" value="@item.Contenido">
+    </form>
+    }
+</div>
+
+@if(ViewBag.Pregunta.IdCategoria == 1){
+    <style>
+        input[type="submit"]{
+            background-color: #d1d22e;
+        }
+        .datos p{
+            background-color: #d1d22e;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(209, 210, 46, 0.6);
+        }
+    </style>
+}
+@if(ViewBag.Pregunta.IdCategoria == 2){
+    <style>
+        input[type="submit"]{
+            background-color: #b81414;
+        }
+        .datos p{
+            background-color: #b81414;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(184, 20, 20, 0.6);
+        }
+    </style>
+}
+@if(ViewBag.Pregunta.IdCategoria == 3){
+    <style>
+        input[type="submit"]{
+            background-color: #12a14b;
+        }
+        .datos p{
+            background-color: #12a14b;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(18, 161, 75, 0.6);
+        }
+    </style>
+}
+@if(ViewBag.Pregunta.IdCategoria == 4){
+    <style>
+        input[type="submit"]{
+            background-color: #b86614;
+        }
+        .datos p{
+            background-color: #b86614;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(184, 102, 20, 0.6);
+        }
+    </style>
+}
+@if(ViewBag.Pregunta.IdCategoria == 5){
+    <style>
+        input[type="submit"]{
+            background-color: #173350;
+        }
+        .datos p{
+            background-color: #173350;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(23, 51, 80, 0.6);
+        }
+    </style>
+}
+@if(ViewBag.Pregunta.IdCategoria == 6){
+    <style>
+        input[type="submit"]{
+            background-color: #d0596e;
+        }
+        .datos p{
+            background-color: #d0596e;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(208, 89, 110, 0.6);
+        }
+    </style>
+}

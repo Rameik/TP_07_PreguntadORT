@@ -1,0 +1,53 @@
+.datos{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 5%;
+    margin-top: 50px;
+    font-size: 1.3rem;
+}
+
+.respuestas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 5%;
+}
+
+form{
+    width: 48%;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-bottom: 1%;
+    margin-inline: 1%;
+}
+
+.titulo{
+    text-align: center;
+    width: 90%;
+    margin: 0 5%;
+    margin-top: 20px;
+}
+
+.respuesta p{
+    font-size: 1.2rem;
+    margin-bottom: 10px
+}
+
+.datos p{
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid white;
+}
+
+input[type="submit"]{
+    border-radius: 30px;
+    width: 100%;
+    padding: 10% 0%;
+    border: none;
+    font-size: 1.7rem;
+    color: whitesmoke;
+    transition: 0.8s ease;
+}

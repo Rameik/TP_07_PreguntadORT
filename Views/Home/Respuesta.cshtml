@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Respuesta";
+}
+
+<link rel="stylesheet" href="~/css/respuesta.css">
+
+@if(ViewBag.Respuesta == true){
+    <p style="margin-top: 50px;">Bien,  @ViewBag.Usuario, ¡La respuesta era <pasda class="correcta">correcta!</pasda> Sumas 5 puntos</p>
+
+    <p>Tu Puntaje actual es:  @ViewBag.Puntaje</p>
+}
+else{
+    <p style="margin-top: 50px;">Mal, @ViewBag.Usuario, ¡La respuesta era <pasda class="incorrecta">incorrecta!</pasda> No sumas puntos</p>
+
+    <p>La respuesta correcta era: <pasda class="correcta">@ViewBag.RespuestaCorrecta.Contenido</pasda></p>
+
+    <p>Tu Puntaje actual es: @ViewBag.Puntaje</p>
+}
+
+<div style="display: flex; justify-content: center; margin-top: 20px">
+    <a href='@Url.Action("Jugar")' class="btn">Siguiente pregunta</a>
+</div>
+

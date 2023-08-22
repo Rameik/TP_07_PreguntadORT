@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@font-face {
+  font-family: 'gotham';
+  src: url(font/HomepageBaukasten-Book.otf);
+}
+
+html {
+  font-size: 14px;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(/img/fondo.jpg);
+  background-size: cover;
+}
+
+footer {
+  position: fixed; 
+  bottom: 0; 
+  margin: 10px 0px 20px 20px;
+  color: white;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Menu */
+
+nav ul li:hover{
+  transform: scale(1.1);
+}
+
+nav li{
+  padding: 1%;
+}
+
+li{
+  list-style: none;
+}
+
+nav a, .menu-desplegado a{
+  text-decoration: none;
+  color: white;
+}
+
+header{
+  position: relative;
+  padding: 0 2%;
+  width: 100%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(33, 37, 41, 0.3);
+}
+
+nav{
+  width: 100%;
+  height: 80px;
+  max-width: 1500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+nav ul{
+  list-style: none;
+  justify-content: space-around;
+}
+
+nav li a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-family: 'gotham';
+  color: white;
+  position: relative;
+}
+
+nav li a:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #e9e0d2; /* Color subrayado */
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+nav li a:hover:after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+nav ul{
+  display: flex;
+  gap: 2rem;
+}
+
+nav .toggle_btn{
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.logo a{
+  display: flex;
+  align-items: center;
+}
+
+.logo img{
+  width: 100px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+nav .logo h1{
+  font-family: 'gotham';
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.menu-desplegado{
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-desplegado.open{
+  height: 150px;
+}
+
+.menu-desplegado li{
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 890px){
+  nav ul{
+      display: none;
+  }
+
+  nav .toggle_btn{
+      display: block;
+  }
+
+  .menu-desplegado{
+      display: block;
+  }
+}
+
+@media (max-width: 890px){
+  .menu-desplegado{
+      left: 2rem;
+      width: unset;
+  }
+}
+
+.menu-desplegado.open li:hover{
+  background-color: #a79375;
+}
+
+
+/* Boton que se llena */
+.btn{
+  overflow: hidden;
+  border: 3px solid #a79375;
+  z-index: 2;
+  position: relative;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #e9e0d2;
+  border-radius: 20px;
+}
+
+.btn::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  left: 0;
+  top: -200%;
+  background-color: #a79375;
+  border-radius: 50%;
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+
+.btn:hover:before{
+  top: 0;
+  border-radius: 0%;
+}
+
+/* Otras cosas */
+
+h1{
+  color: whitesmoke;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 35px;
+}
